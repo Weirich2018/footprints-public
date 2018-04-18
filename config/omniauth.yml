@@ -2,7 +2,7 @@ development:
   client_id: '425715198288-n3pt1hmhs99gdh11sn5frc1thqpcmemi.apps.googleusercontent.com'
   client_secret: 'iEpR1y-EmCLgx6anKfVcfLxk'
 
-local:
+test:
   client_id: '425715198288-n3pt1hmhs99gdh11sn5frc1thqpcmemi.apps.googleusercontent.com'
   client_secret: 'iEpR1y-EmCLgx6anKfVcfLxk'
 

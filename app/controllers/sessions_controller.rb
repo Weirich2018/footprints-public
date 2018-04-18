@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     begin
       auth_hash = request.env["omniauth.auth"]
-      user    = repo.user.find_or_create_by_auth_hash(auth_hash) rescue nil
+      user    = repo.user.find_or_create_by_auth_hash(auth_hash)
 
       prefetch_craftsmen(auth_hash)
       build_sessions(user, auth_hash)

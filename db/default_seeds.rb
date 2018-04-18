@@ -345,7 +345,7 @@ module DefaultSeed
 end
 
 
-if Rails.env == "development"
+if Rails.env == "development" || Rails.env == "test"
   DefaultSeed.craftsman
   DefaultSeed.user
 elsif Rails.env == "staging"
