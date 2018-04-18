@@ -19,6 +19,7 @@ gem "edn", '~> 1.0.2'
 gem "httparty", '~> 0.13.0'
 gem "american_date"
 gem 'pg', '0.21.0'
+gem 'byebug'
 
 gem 'stockroom', git: 'https://github.com/ryanzverner/stockroom-ruby-client.git'
 
