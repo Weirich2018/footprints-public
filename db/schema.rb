@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20140904131223) do
   create_table "craftsmen", force: true do |t|
     t.string  "name"
     t.string  "status"
-    t.integer "employment_id",     limit: 255
+    t.integer "employment_id"
     t.string  "uid"
     t.string  "email"
     t.string  "location",                      default: "Chicago"
