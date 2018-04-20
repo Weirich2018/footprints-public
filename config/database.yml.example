@@ -1,11 +1,18 @@
-development:
-  adapter: sqlite3
-  database: db/development.db3
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  username: postgres
+  password: password
+  pool: 2
 
-local:
-  adapter: sqlite3
-  database: db/local.db3
+development:
+  <<: *common
+  database: footprints_development
 
 test:
-  adapter: sqlite3
-  database: db/test.db3
+  <<: *common
+  database: footprints_test
+
+production:
+  <<: *common
+  database: footprints_production
