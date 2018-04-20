@@ -7,10 +7,7 @@ class User < ActiveRecord::Base
   before_create :associate_craftsman
 
   def associate_craftsman
-    craftsman = Craftsman.find_by_email(self.email) || Craftsman.create({
-          name: self.email,
-          employment_id: ((Craftsman.all.pluck(:employment_id).sort.last || 0) + 1),
-          email: self.email })
+    craftsman = Craftsman.find_by_email(self.email)
     self.craftsman_id = craftsman.employment_id if craftsman
   end
 
