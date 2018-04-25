@@ -345,14 +345,14 @@ module DefaultSeed
 end
 
 
-if Rails.env == "development" || Rails.env == "test"
+if Rails.env == "development"
   DefaultSeed.craftsman
   DefaultSeed.user
+  DefaultSeed.applicant
+  DefaultSeed.assign_craftsmen
+  DefaultSeed.add_interaction_dates
+  DefaultSeed.add_salaries
 elsif Rails.env == "staging"
   DefaultSeed.staging_steward
 end
 
-DefaultSeed.applicant
-DefaultSeed.assign_craftsmen
-DefaultSeed.add_interaction_dates
-DefaultSeed.add_salaries
