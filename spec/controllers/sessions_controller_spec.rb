@@ -61,10 +61,10 @@ describe SessionsController do
 
         request.env["omniauth.auth"] = {:extra => {:id_token => "invalid token"},
           :info => {:email => "some email"},
-          :uid => "007"}
+          :uid => "007"}.with_indifferent_access
       end
 
-      xit "catches warehouse authentication errors" do
+      it "catches warehouse authentication errors" do
         get :create
 
         expect(flash[:error].join("")).to include "not authorized"
@@ -77,7 +77,7 @@ describe SessionsController do
         end
       end
 
-      xit "logs an error message on warehouse authentication errors" do
+      it "logs an error message on warehouse authentication errors" do
         expect(Rails.logger).to receive(:error).at_least(:once)
 
         get :create
@@ -91,10 +91,10 @@ describe SessionsController do
 
         request.env["omniauth.auth"] = {:extra => {:id_token => "invalid token"},
                                         :info => {:email => "some email"},
-                                        :uid => "007"}
+                                        :uid => "007"}.with_indifferent_access
       end
 
-      xit 'catches warehouse authorization errors' do
+      it 'catches warehouse authorization errors' do
         get :create
 
         expect(flash[:error].join("")).to include 'not authorized'
