@@ -175,6 +175,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    syslog-logger (1.6.8)
     teaspoon (1.1.5)
       railties (>= 3.2.5, < 6)
     teaspoon-jasmine (2.3.4)
@@ -226,6 +227,7 @@ DEPENDENCIES
   sdoc
   simplecov
   stockroom!
+  syslog-logger
   teaspoon
   teaspoon-jasmine
   therubyracer

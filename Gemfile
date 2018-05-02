@@ -20,6 +20,7 @@ gem "httparty", '~> 0.13.0'
 gem "american_date"
 gem 'pg', '0.21.0'
 gem 'byebug'
+gem 'syslog-logger'
 
 gem 'stockroom', git: 'https://github.com/ryanzverner/stockroom-ruby-client.git'
 
